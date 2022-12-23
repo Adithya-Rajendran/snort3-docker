@@ -56,6 +56,5 @@ RUN cd /snort/snort3-3.1.50.0 && \
 # Fix for "/usr/local/bin/snort: error while loading shared libraries: libdaq.so.3: cannot open shared object file: No such file or directory"
 RUN ln -s /usr/local/lib/daq_s3/lib/libdaq.so.3 /lib/
 
-RUN mkdir $my_path/logs && touch $my_path/logs/snort.log
 # $my_path/bin/snort -q -c $my_path/etc/snort/snort.lua --daq-dir $my_path//lib/daq_s3/lib/daq -A fast -i enp1s0 > $my_path/logs/snort.log
-ENTRYPOINT ["$my_path/bin/snort", "-q", "-c", "$my_path/etc/snort/snort.lua", "--daq-dir", "$my_path/lib/daq_s3/lib/daq", "-A", "alert_csv", -i", "enp1s0", ">", "$my_path/logs/snort.log"]
+ENTRYPOINT ["/usr/local/bin/snort", "-q", "-c", "/usr/local/etc/snort/snort.lua", "--daq-dir", "/usr/local/lib/daq_s3/lib/daq", "-A", "alert_csv", "-i", "enp1s0"]
