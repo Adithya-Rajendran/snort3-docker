@@ -1,4 +1,4 @@
-# snort3-docker
+# snort3-docker (NOT COMPLETED)
 Create a Dockerfile to build snort3, tcmalloc, and libdaq libraries.
 
 ## Usage 
