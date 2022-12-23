@@ -10,8 +10,9 @@ docker build -t Container_snort .
 
 Run the container
 ```
-docker run -it --rm --name snort3 --volume $(pwd)/rules/:/usr/local/etc/snort --net=host Container_snort:latest
+docker run -it --rm --name snort --volume $(pwd)/snort/:/usr/local/etc/snort --volume $(pwd)/rules/:/usr/local/etc/rules --net=host Container_snort:latest
 ```
+
 
 ## License
 
