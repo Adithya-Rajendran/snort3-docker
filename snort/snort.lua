@@ -189,12 +189,10 @@ ips =
     -- note that rules files can include other rules files
     -- (see also related path vars at the top of snort_defaults.lua)
 
-    variables = default_variables
-    rules = { 
-        include $RULE_PATH/snort3-community-rules/snort3-community.rules, 
-        include $RULE_PATH/local.rules, 
-        include $RULE_PATH/sensitive_data.rules
-    }
+    variables = default_variables,
+    rules = [[ 
+        include $RULE_PATH//snort3-community-rules/snort3-community.rules include $RULE_PATH//local.rules 
+        ]]
 }
 
 -- use these to configure additional rule actions
