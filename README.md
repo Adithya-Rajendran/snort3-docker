@@ -12,3 +12,7 @@ Run the container
 ```
 docker run -it --rm --name snort3 --volume $(pwd)/rules/:/usr/local/etc/snort --net=host Container_snort:latest
 ```
+
+## License
+
+[GNU General Public License v3.0](LICENSE)
