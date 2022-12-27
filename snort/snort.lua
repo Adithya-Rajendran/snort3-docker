@@ -191,7 +191,8 @@ ips =
 
     variables = default_variables,
     rules = [[ 
-        include $RULE_PATH//snort3-community-rules/snort3-community.rules include $RULE_PATH//local.rules 
+        include $RULE_PATH//snort3-community-rules/snort3-community.rules
+        include $RULE_PATH//local.rules 
         ]]
 }
 
